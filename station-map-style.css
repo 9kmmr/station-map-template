@@ -1,0 +1,42 @@
+.map_station_sec {
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.map_station_map_section {
+  text-align: center;
+}
+.map_station_map {
+  height: 450px;
+  width: 100%;
+  margin: 0 auto;
+}
+.map_station_main_content {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.map_station_infos {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.map_station_infos_items {
+  margin: 5px;
+  padding: 5px;
+}
+.map_station-items {
+  padding: 5px;
+  margin: 5px;
+}
+.map_station_icon {
+  padding: 10px;
+  border-radius: 50%;
+}
+.ms_img {
+  width: 70px;
+}
+.ms_rounded-circle {
+}
