@@ -7,7 +7,25 @@
  * Author: yourmindhasgone
  * Plugin Url: https://wordpress.org
  * Version: 1.0.1
+ * Text Domain: station-map
  */
+
+
+
+if (!function_exists('station_map_load_text_domain')) {
+    function station_map_load_text_domain()
+    {
+
+        load_plugin_textdomain(
+            'station-map',
+            false,
+            plugin_dir_path(__FILE__)  . '/languages/'
+        );
+    }
+}
+
+add_action('plugins_loaded', 'station_map_load_text_domain');
+
 
 add_shortcode('station_map_template', 'station_map_template_handle');
 if (!function_exists('station_map_template_handle')) {

@@ -55,7 +55,7 @@ if (post_type_exists('station')) {
                     <div class="map_station_sec">
                         <div class="map_station-items">
                             <div>
-                                <a class="ms_button ms_button_view" target="_blank" href="https://maps.google.de/maps?q=<?= $station['location']['lat'] ?>, <?= $station['location']['lng'] ?>">
+                                <a class="ms_button ms_button_view" title="<?= __("View in Map", 'station-map') ?>" target="_blank" href="https://maps.google.de/maps?q=<?= $station['location']['lat'] ?>, <?= $station['location']['lng'] ?>">
                                     <i class="fa fa-map fa-3x"></i>
                                 </a>
                             </div>
@@ -83,7 +83,7 @@ if (post_type_exists('station')) {
                             </div>
 
                         </div>
-                        <div class="map_station-items">
+                        <div class="map_station-items map_station-itemicon">
                             <div class="map_station_icon">
                                 <img src="<?= isset($station['thumbnail']) ? $station['thumbnail'] : "" ?>" class="ms_img ms_rounded-circle" alt="<?= esc_html(isset($station['title']) ? $station['title'] : $station['post_title']) ?>">
                             </div>

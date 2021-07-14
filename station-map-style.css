@@ -38,5 +38,23 @@
 .ms_img {
   width: 70px;
 }
-.ms_rounded-circle {
+
+@media screen and (max-width: 768px) {
+  .map_station_sec {
+    padding: 2px;
+    margin: 2px 0px;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+  }
+  .map_station_infos {
+    width: 100%;
+    padding: 1px;
+  }
+  .map_station-itemicon {
+    display: none;
+  }
 }
