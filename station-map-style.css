@@ -1,6 +1,5 @@
 .map_station_sec {
   display: flex;
-  padding: 20px;
   margin: 20px;
   justify-content: space-between;
   align-items: center;
@@ -35,8 +34,12 @@
   padding: 10px;
   border-radius: 50%;
 }
-.ms_img {
-  width: 70px;
+.map_station_infos_name {
+  cursor: pointer;
+}
+.map_station_mini_map {
+  width: 150px;
+  height: 150px;
 }
 
 @media screen and (max-width: 768px) {
