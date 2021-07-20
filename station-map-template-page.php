@@ -107,6 +107,7 @@ if (post_type_exists('station')) {
                     data-telephone="<?=esc_html(isset($station['telephone']) ? $station['telephone'] : "")?>" 
                     data-information="<?= esc_html(isset($station['information']) ? $station['information'] : "") ?>"
                     data-homepage="<?= esc_url(isset($station['homepage']) ? preg_replace('#^https?://#i', '', $station['homepage']) : "") ?>"
+                    data-id=<?=esc_html($station['id'])?>
                     
                     >
                         <div class="map_station-items">

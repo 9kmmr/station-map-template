@@ -1,4 +1,8 @@
 (function ($) {
+  if ($("#map_station_map").length) {
+    $("#main").css("overflow", "unset");
+  }
+
   const map = L.map("map_station_map").setView([38.013, 142.251], 5);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
@@ -14,25 +18,8 @@
     },
   });
 
-  function ajax_get_map_stations(callback) {
-    $.ajax({
-      type: "GET",
-      url:
-        "/wp-admin/admin-ajax.php?order=" +
-        map_station_order +
-        "&orderby=" +
-        map_station_orderby,
-      data: {
-        action: "get_station_posts",
-      },
-
-      success: function (response) {
-        callback(response);
-      },
-    });
-  }
-
   $(function () {
+    markers = [];
     $(".map_station_mini_map").each(function (index) {
       let map_station_sec = $(this).parent().parent();
 
@@ -51,7 +38,7 @@
         }
       ).addTo(mini_map);
 
-      L.marker(
+      markers[$(map_station_sec).data("id")] = L.marker(
         [$(map_station_sec).data("lat"), $(map_station_sec).data("lng")],
         {
           icon: new mcIcon(),
@@ -74,6 +61,11 @@
                       `
         )
         .addTo(map);
+    });
+
+    $(".map_station_infos_name").click(function () {
+      const parent = $(this).parent().parent().parent();
+      markers[$(parent).data("id")].openPopup();
     });
   });
 })(jQuery);
