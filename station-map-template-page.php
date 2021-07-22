@@ -15,7 +15,8 @@ if (post_type_exists('station')) {
         'numberposts' => $atts['num'],
         'order' => $atts['order'],
         'orderby' => $atts['orderby'],
-        'post_type' => 'station'
+        'post_type' => 'station',
+        'suppress_filters' => 0
 
     ];
     $all_station = get_posts($all_station_args);
