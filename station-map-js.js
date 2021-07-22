@@ -3,7 +3,7 @@
     $("#main").css("overflow", "unset");
   }
 
-  const map = L.map("map_station_map").setView([38.013, 142.251], 5);
+  /* const map = L.map("map_station_map").setView([38.013, 142.251], 5);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -16,7 +16,7 @@
       iconAnchor: [16, 52],
       popupAnchor: [-3, -55],
     },
-  });
+  }); */
 
   $(function () {
     markers = [];
@@ -31,14 +31,14 @@
         [$(map_station_sec).data("lat"), $(map_station_sec).data("lng")],
         15
       );
-      L.marker(
+      /* L.marker(
         [$(map_station_sec).data("lat"), $(map_station_sec).data("lng")],
         {
           icon: new mcIcon(),
         }
-      ).addTo(mini_map);
+      ).addTo(mini_map); */
 
-      markers[$(map_station_sec).data("id")] = L.marker(
+      /* markers[$(map_station_sec).data("id")] = L.marker(
         [$(map_station_sec).data("lat"), $(map_station_sec).data("lng")],
         {
           icon: new mcIcon(),
@@ -60,12 +60,12 @@
           )}' target='_blank'>Show in Google Maps</a>
                       `
         )
-        .addTo(map);
+        .addTo(map); */
     });
 
-    $(".map_station_infos_name").click(function () {
+    /* $(".map_station_infos_name").click(function () {
       const parent = $(this).parent().parent().parent();
       markers[$(parent).data("id")].openPopup();
-    });
+    }); */
   });
 })(jQuery);

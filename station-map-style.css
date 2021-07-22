@@ -43,6 +43,7 @@
 .map_station_mini_map {
   width: 150px;
   height: 150px;
+  border: 5px solid #005d86;
 }
 
 @media screen and (max-width: 768px) {
